@@ -264,6 +264,7 @@ export const ComponentPage = () => {
 
                 </div>
             </Body>
+       
         </Page >
     );
 }

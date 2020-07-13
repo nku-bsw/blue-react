@@ -2,6 +2,7 @@ import React from "react";
 import Page from "../../components/Page";
 import Body from "../../components/Body";
 import { logo, appTitle } from "../Global";
+import Footer from "../../components/Footer";
 
 const packageJson = require("../../../package.json");
 
@@ -29,6 +30,7 @@ export const HomePage = () => (
                 <h2 className="mt-4 mb-3">Install to existing project</h2>
                 <code>npm i blue-react</code>
             </div>
+        <Footer />
         </Body>
     </Page>
 )

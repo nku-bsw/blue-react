@@ -18,3 +18,4 @@ exports.SidebarMenu = require("./dist/components/SidebarMenu.js")["default"];
 exports.Switch = require("./dist/components/Switch.js")["default"];
 exports.SwitchMenuItem = require("./dist/components/SwitchMenuItem.js")["default"];
 exports.Utilities = require("./dist/components/Utilities.js")["default"];
+exports.Footer = require("./dist/components/Footer.js")["default"];
