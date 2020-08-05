@@ -21,10 +21,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build-docs": "react-scripts build && npm run docgen",
-    "build-caret": "babel ./src/components/Caret.tsx --out-dir ./dist/components --extensions \".tsx\"",
     "build": "babel ./src/components --out-dir ./dist/components --extensions \".tsx,.js\" & node-sass ./dist/style.scss ./dist/style.css",
     "build-release": "npm run build && npm run docgen",
-    "docgen-caret": "react-docgen ./src/components/*.tsx -o ./src/docs/data/docs.json",
     "docgen-only": "react-docgen ./src/components/ -x tsx -x js -e Utilities.js -o ./src/docs/data/docs.json",
     "docgen": "npm run docgen-only && node followUpDocs",
     "test": "react-scripts test",

@@ -7,6 +7,8 @@ import Page from "../../components/Page";
 import Header from "../../components/Header";
 import { logo, appTitle } from "../Global";
 import Body from "../../components/Body";
+import ActionMenu from "../../components/ActionMenu";
+import ActionMenuItem from "../../components/ActionMenuItem";
 
 export interface UtilitiesPageProps { }
 
@@ -251,6 +253,10 @@ Utilities.startLoading();`}</Highlight>
                     <Header.Title logo={logo} appTitle={appTitle}>
                         Utilities
                     </Header.Title>
+
+                    <ActionMenu>
+                        <ActionMenuItem label="Hello" />
+                    </ActionMenu>
                 </Header>
 
                 <Body containerClass="container">
