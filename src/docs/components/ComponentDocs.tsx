@@ -18,15 +18,20 @@ export class ComponentDocs extends Component<IComponentDocsProps, { ExampleCompo
     };
 
     componentDidMount() {
+        const { comp } = this.props;
         try {
-            const { comp } = this.props;
-            const ExampleComponent = require(`../examples/${comp.displayName}.js`);
-            // console.log(ExampleComponent);
+            const ExampleComponent = require(`../examples/${comp.displayName}.tsx`);
             this.setState({ ExampleComponent: ExampleComponent["default"] });
         }
         catch (ex) {
             // console.error(ex);
             // This component has no example
+
+            try {
+                const ExampleComponent = require(`../examples/${comp.displayName}.js`);
+                this.setState({ ExampleComponent: ExampleComponent["default"] });
+            }
+            catch (ex) { }
         }
     }
 

@@ -1,6 +1,6 @@
 {
   "name": "blue-react",
-  "version": "6.12.1",
+  "version": "7.0.0",
   "description": "Blue React Components",
   "license": "GNU",
   "main": "index.js",
@@ -21,9 +21,12 @@
   "scripts": {
     "start": "react-scripts start",
     "build-docs": "react-scripts build && npm run docgen",
-    "build": "babel ./src/components --out-dir ./dist/components & node-sass ./dist/style.scss ./dist/style.css",
+    "build-caret": "babel ./src/components/Caret.tsx --out-dir ./dist/components --extensions \".tsx\"",
+    "build": "babel ./src/components --out-dir ./dist/components --extensions \".tsx,.js\" & node-sass ./dist/style.scss ./dist/style.css",
     "build-release": "npm run build && npm run docgen",
-    "docgen": "react-docgen ./src/components/ -o ./src/docs/data/docs.json && node followUpDocs",
+    "docgen-caret": "react-docgen ./src/components/*.tsx -o ./src/docs/data/docs.json",
+    "docgen-only": "react-docgen ./src/components/ -x tsx -x js -e Utilities.js -o ./src/docs/data/docs.json",
+    "docgen": "npm run docgen-only && node followUpDocs",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build-docs",
@@ -33,20 +36,23 @@
     "release": "npm publish && npm run deploy"
   },
   "dependencies": {
-    "bootstrap": "^4.5.0",
-    "react": "^16.13.1",
+    "bootstrap": "^5.0.0-alpha1",
+    "react": "^16.13.1"
+  },
+  "peerDependencies": {
     "reactstrap": "^8.5.1"
   },
   "devDependencies": {
-    "@babel/cli": "^7.10.4",
-    "@babel/preset-env": "^7.10.4",
+    "@babel/cli": "^7.10.5",
+    "@babel/preset-env": "^7.11.0",
     "@babel/preset-react": "^7.10.4",
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.5.0",
-    "@testing-library/user-event": "^7.2.1",
-    "@types/jest": "^24.9.1",
-    "@types/node": "^12.12.47",
-    "@types/react": "^16.9.41",
+    "@babel/preset-typescript": "^7.10.4",
+    "@testing-library/jest-dom": "^5.11.2",
+    "@testing-library/react": "^10.4.8",
+    "@testing-library/user-event": "^12.1.0",
+    "@types/jest": "^26.0.8",
+    "@types/node": "^14.0.27",
+    "@types/react": "^16.9.44",
     "@types/react-dom": "^16.9.8",
     "@types/react-highlight": "^0.12.2",
     "@types/react-router-dom": "^5.1.5",
@@ -58,7 +64,8 @@
     "react-highlight": "^0.12.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
-    "typescript": "^3.7.5"
+    "reactstrap": "^8.5.1",
+    "typescript": "^3.9.7"
   },
   "eslintConfig": {
     "extends": "react-app"

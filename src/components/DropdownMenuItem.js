@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Utilities from "./Utilities.js";
-import Caret from "./Caret.js";
+import Caret from "./Caret.tsx";
 
 /**
  * Dropdown-Button und Link für die Sidebar.
