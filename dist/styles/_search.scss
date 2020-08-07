@@ -33,6 +33,7 @@
 .blue-app-search-control {
     border: none;
     background-color: transparent !important;
+    height: auto !important;
 
     &:focus {
         box-shadow: none;

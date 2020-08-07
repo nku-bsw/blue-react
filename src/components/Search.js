@@ -24,14 +24,12 @@ class Search extends React.Component {
             autoFocus: false,
             body: false,
             className: "",
-            icon: <span><svg width="1em" height="1em" viewBox="0 0 16 16" className="bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z" />
-                <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
-            </svg></span>,
+            icon: <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" > <path fillRule="evenodd" d="M10.442 10.442a1 1 0 011.415 0l3.85 3.85a1 1 0 01-1.414 1.415l-3.85-3.85a1 1 0 010-1.415z" ></path> <path fillRule="evenodd" d="M6.5 12a5.5 5.5 0 100-11 5.5 5.5 0 000 11zM13 6.5a6.5 6.5 0 11-13 0 6.5 6.5 0 0113 0z" ></path> </svg>,
             onChange: (event) => { },
             onSubmit: (event) => { },
             placeholder: "",
             reset: false,
+            resetIcon: <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" className="bi bi-x" viewBox="0 0 16 16" > <path fillRule="evenodd" d="M11.854 4.146a.5.5 0 010 .708l-7 7a.5.5 0 01-.708-.708l7-7a.5.5 0 01.708 0z" ></path> <path fillRule="evenodd" d="M4.146 4.146a.5.5 0 000 .708l7 7a.5.5 0 00.708-.708l-7-7a.5.5 0 00-.708 0z" ></path> </svg>,
             sidebar: false,
             value: ""
         };
@@ -108,7 +106,7 @@ class Search extends React.Component {
                                     });
                                 }}
                             >
-                                <span className="bi-navigate_cross" />
+                                {this.props.resetIcon}
                             </button>
                         </div>
                     }
@@ -153,6 +151,7 @@ Search.propTypes = {
      * Erlaube Zurücksetzen?
      */
     reset: PropTypes.bool,
+    resetIcon: PropTypes.any,
 
     /**
      * Wird Komponente in der Sidebar genutzt?
