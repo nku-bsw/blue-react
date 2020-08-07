@@ -27,8 +27,8 @@ export const ComponentPage = () => {
         <Page>
             <Header>
                 <HeaderTitle logo={logo}>
-                    <><Link to="/">{appTitle}</Link> / </>
-                    {selectedComponent ? <Link to="/component">React Components</Link> : <span>React Components</span>}
+                    <><Link to="/v6/">{appTitle}</Link> / </>
+                    {selectedComponent ? <Link to="/v6/component">React Components</Link> : <span>React Components</span>}
                     {selectedComponent &&
                         <span> / {selectedComponent}</span>
                     }
@@ -233,12 +233,12 @@ export const ComponentPage = () => {
                                     {
                                         components.length > 0 && value !== "" ? components.map((i: any, index: number) =>
                                             <div key={index}>
-                                                <Link to={`/component/${i.displayName}`} className="nav-link">{i.displayName}</Link>
+                                                <Link to={`/v6/component/${i.displayName}`} className="nav-link">{i.displayName}</Link>
                                             </div>
                                         )
                                             : docs && Object.values(docs).map((i: any, index: number) =>
                                                 <div key={index} className="nav-item">
-                                                    <Link to={`/component/${i.displayName}`} className="nav-link">{i.displayName}</Link>
+                                                    <Link to={`/v6/component/${i.displayName}`} className="nav-link">{i.displayName}</Link>
                                                 </div>
 
                                             )

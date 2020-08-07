@@ -1,0 +1,18 @@
+@mixin gridBtn() {
+    color: inherit;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: background-color .2s ease-in-out;
+    gap: .5rem;
+    padding: .5rem;
+    position: relative;
+    border: none;
+    font: inherit;
+    background-color: transparent;
+
+    &:hover {
+        color: inherit;
+        background-color: var(--btn-hover-bg);
+    }
+}

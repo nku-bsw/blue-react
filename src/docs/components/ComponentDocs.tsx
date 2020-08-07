@@ -42,7 +42,7 @@ export class ComponentDocs extends Component<IComponentDocsProps, { ExampleCompo
         return (
             <article className="pt-5">
                 <h1 className="page-header mt-0">
-                    <Link to={`/component/${comp.displayName}`}>#</Link> {comp.displayName}
+                    <Link to={`/v6/component/${comp.displayName}`}>#</Link> {comp.displayName}
                 </h1>
 
                 <p dangerouslySetInnerHTML={{
@@ -62,7 +62,7 @@ export class ComponentDocs extends Component<IComponentDocsProps, { ExampleCompo
 
                 {comp.displayName == "Intro" &&
                     <p>
-                        <Link to="/intro-demo">Take a look at this demo</Link>
+                        <Link to="/v6/intro-demo">Take a look at this demo</Link>
                     </p>
                 }
 

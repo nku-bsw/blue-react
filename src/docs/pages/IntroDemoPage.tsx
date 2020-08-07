@@ -26,6 +26,6 @@ export const IntroDemoPage = () => (
             </div>
         </form>
 
-        <Link to="/component/Intro"><ChevronLeft /> Back to the docs</Link>
+        <Link to="/v6/component/Intro"><ChevronLeft /> Back to the docs</Link>
     </Intro>
 );

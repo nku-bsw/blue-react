@@ -1,0 +1,18 @@
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px
+) !default;
+
+:root {
+    --touchy-size: 48px;
+    --sidebar-width: 268px;
+    --frosted-filter: blur(3px) saturate(125%);
+
+    --tooltip-bg: rgba(0,0,0,.8);
+    --tooltip-color: white;
+    --btn-hover-bg: rgba(255,255,255,.2);
+}
